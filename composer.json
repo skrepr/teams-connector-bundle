@@ -1,20 +1,43 @@
 {
-    "name": "skrepr/package-skeleton",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "type": "library",
+    "name": "skrepr/teams-connector-bundle",
+    "description": "Symfony bundle integration of skrepr/teams-connector library",
+    "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {
             "name": "skrepr"
+        },
+        {
+            "name": "Evert Jan Hakvoort",
+            "email": "evertjan@hakvoort.io"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Skrepr\\TeamsConnectorBundle\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
     "require": {
-        "php": "^7.4 || ^8.0"
+        "php": "^7.4 || ^8.0",
+        "skrepr/teams-connector": "^0.1.0",
+        "symfony/framework-bundle": "^4.4 || ^5.4 || ^6.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "guzzlehttp/guzzle": "^7.4",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.0",
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-latest"
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
+    },
+    "repositories": {
+        "teams-connector-bundle": {
+            "type": "path",
+            "url": "/data"
+        }
     }
 }

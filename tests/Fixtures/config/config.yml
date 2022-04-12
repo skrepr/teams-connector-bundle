@@ -1,0 +1,2 @@
+skrepr_teams_connector:
+  endpoint: 'https://outlook.office.com/webhook/xxxxxxxx-xxxx-xxxxxxxx-xxxxxx-xxxxxx-xxx-xxxxxx/IncomingWebhook/xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
