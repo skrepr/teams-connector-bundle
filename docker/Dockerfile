@@ -1,5 +1,5 @@
-ARG PHP_VERSION=8.1
-FROM composer:2.2.7 AS composer
+ARG PHP_VERSION=8.2
+FROM composer:2.5.1 AS composer
 FROM php:${PHP_VERSION}-cli-buster AS php
 
 FROM php
@@ -11,6 +11,7 @@ RUN apt-get update && \
         git \
         libzip-dev \
         libzip4 \
+        unzip \
     && \
     docker-php-ext-install zip && \
     pecl install pcov && \
